@@ -1,6 +1,9 @@
  
 import { Component } from '@angular/core';
-import { DetailsPage } from '../details/details'
+import { CompAlertsPage } from '../comp-alerts/comp-alerts';
+import { CompActionsheetPage } from '../comp-actionsheet/comp-actionsheet';
+import { CompBadgePage } from '../comp-badge/comp-badge';
+import { CompButtonsPage } from '../comp-buttons/comp-buttons';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -8,20 +11,39 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  items: any[] = [];
+  dataprovider: any[] = [
+    {
+      label: "Action Sheets",
+      page: CompActionsheetPage,
+      value: 0
+    },
+    {
+      label: "Alerts",
+      page: CompAlertsPage,
+      value: 1
+    },
+    {
+      label: "Badges",
+      page: CompBadgePage,
+      value: 1
+    },
+    {
+      label: "Buttons",
+      page: CompButtonsPage,
+      value: 1
+    }
+  ];
 
   constructor(public navCtrl: NavController) {
-    for(let i=0;i<10;i++){
-      this.items.push( {
-        name: 'chloe ' + i,
-        data: i 
-      })
-    }
+    
   }
-
+ 
 
   itemSelected(item) {
-    this.navCtrl.push(DetailsPage, {item:item})
+    
+    this.navCtrl.push(item.page, {param:item})
+ 
+    
   }
 
 

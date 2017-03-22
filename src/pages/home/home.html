@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Ionic Components</h2>
   
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item.name }}
+    <button ion-item *ngFor="let item of dataprovider" (click)="itemSelected(item)">
+      {{ item.label }}
     </button>
   
 </ion-content>

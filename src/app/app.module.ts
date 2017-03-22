@@ -5,7 +5,10 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { DetailsPage } from '../pages/details/details';
+import { CompAlertsPage } from '../pages/comp-alerts/comp-alerts';
+import { CompActionsheetPage } from '../pages/comp-actionsheet/comp-actionsheet';
+import { CompBadgePage } from '../pages/comp-badge/comp-badge';
+import { CompButtonsPage } from '../pages/comp-buttons/comp-buttons';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,11 @@ import { DetailsPage } from '../pages/details/details';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailsPage
+    // new components
+    CompAlertsPage,
+    CompActionsheetPage,
+    CompBadgePage,
+    CompButtonsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +33,11 @@ import { DetailsPage } from '../pages/details/details';
     ContactPage,
     HomePage,
     TabsPage,
-    DetailsPage
+    // new components
+    CompAlertsPage,
+    CompActionsheetPage,
+    CompBadgePage,
+    CompButtonsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
